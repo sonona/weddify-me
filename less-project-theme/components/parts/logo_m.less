@@ -40,7 +40,7 @@
             // show just the icon till you have space for the whole logo
             width: 6em; // bespoke width
             height: @siteLogoHeight;
-            background: url('../img/skin/logo/no-svg_logo.png') left top no-repeat;
+            background: url('../img/skin/logo/weddifymelogo.png') left top no-repeat;
         });
         // show whole logo 
         .min-width(22.5em; {
@@ -52,22 +52,23 @@
     .backgroundsize .logo__link {
         // 1px/0.0625em
         .min-width(0.0625em; {
-            background-image: url('../img/skin/logo/no-svg_logo@2x.png'); 
-            background-size: @siteLogoWidth @siteLogoHeight;
+            //background-image: url('../img/skin/logo/no-svg_logo@2x.png'); 
+            //background-size: @siteLogoWidth @siteLogoHeight;
+            background-size: contain;
         });
    }
     // if svg use the svg of the logo
     .svg .logo__link {
         // 1px/0.0625em
         .min-width(0.0625em; {
-           background-image: url('../img/skin/logo/svg_logo.svg'); 
+           //background-image: url('../img/skin/logo/svg_logo.svg'); 
         });
     }
     // dirty hack for opera mini as it doesn't handle svg background images well
     x:-o-prefocus, .svg .logo__link {
         // 1px/0.0625em
         .min-width(0.0625em; {
-            background-image: url('../img/skin/logo/no-svg_logo.png');
+           // background-image: url('../img/skin/logo/no-svg_logo.png');
         });
     }
 
