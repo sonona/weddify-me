@@ -1,0 +1,55 @@
+// out: null
+// Media Queries for component
+/* !Footers --------------------------------------------------- */
+/* clases
+.footer (generic footer class)
+.contentinfo (generic class based on role="contentinfo" )
+.contentinfo__wrapper 
+
+*/
+
+.contentinfo__wrapper {
+    //640px/40em 
+    .min-width(40em; {
+        padding-left: 3em;
+        padding-right: 3em;
+        min-height: 15em;
+        position: relative;
+    });
+    // 768px/48em
+	.min-width(48em; {
+         .six-eighths();
+        
+    });
+}
+
+
+//layout footer 
+.contentinfo__section {
+    //640px/40em 
+    .min-width(40em; {
+        .one-half();
+    });
+}
+
+.contentinfo__small-print {
+    //640px/40em 
+    .min-width(40em; {
+        position: absolute;
+        right: 0;
+        top: 6em;
+    });
+    
+    //1024px/64em 
+    .min-width(64em; {
+        .golden-section--sm(); 
+    });
+}
+
+
+//.warning .name-space-component {
+    // 1px/0.0625em
+    //.min-width(0.0625em; { 
+     //   color: green;
+    //});
+//}

@@ -1,0 +1,107 @@
+// out: null
+
+// global styles 
+/* !Drupal pager --------------------------------------------------- */
+// extension of .menu
+/* clases
+.pager
+.pager li
+.pager-current
+
+.item-list .pager li
+
+// show more buttons
+.pager-show-more (wrapper)
+.pager-show-more-next
+.pager-show-more-next a (the link)
+
+*/
+
+// !SYSTEM pager - overwriting the pager ==================================================
+.pager {
+    margin: 0.75em 0 0;
+    padding: 0.75em 0 0;
+    border-top: 1px solid @grey--light-3;
+    text-align: center;
+
+    .clearfix();
+}
+
+.pager li {
+    display: inline;
+    padding: 0.5em;
+    background-image: none;
+    list-style-type: none;
+}
+
+
+.pager-current {
+    color: @textcolor;
+    font-weight: normal;
+}
+
+
+// Component in situ 
+.item-list .pager li {
+  &:first-child {
+    
+    padding: 0;
+    max-width: none;
+    background: none;
+  }
+}
+
+// Show more buttons
+.pager-show-more {
+    border: 0;
+    padding: 0;
+    max-width: none;
+}
+
+.pager-show-more .pager-show-more-next {
+    display: block;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.pager-show-more-next a {
+display : block;
+margin : 0.75em 0; // 12px 0 12px
+padding : 0.75em 1.5em; // height 48px; 
+font-size: 1em;
+font-weight: 700;
+line-height: 1.5;
+text-transform: uppercase;
+text-align: center;
+.letterspacing120();
+color : @white;
+// border radius if required 
+//.rounded(1.5em);
+cursor : pointer;
+// background function
+background-color : darken(@grey--dark-1, 2%);
+    
+.transition(background @duration-promptly ease-in-out);
+    
+    &:hover, &:active, &:focus {
+        color: @white;
+        text-decoration : none; 
+    }
+
+    &:hover {
+        background-color : @grey--dark-1;
+    }
+    
+    &:active, &:focus {
+        margin-top: 0.8125em;
+        margin-bottom: 0.6875em; // 13px 0 11px
+        background-color : lighten(@grey--dark-1, 2%);
+    }
+    
+}
+
+// components in situe 
+.d-feed .pager-show-more {
+    width: 100%;   
+}

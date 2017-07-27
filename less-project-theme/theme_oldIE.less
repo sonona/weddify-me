@@ -1,0 +1,144 @@
+// out: ../css/theme_oldIE.css, compress: true, strictMath: true
+
+// ============================================================
+//
+//  Big Mallet's Mallet
+//	Version: 3.0
+//	URL: http://bigmallet.co.uk
+//	Made from bits and pieces from the internet. 
+//	
+//	Old IE styles for IE7 & IE8
+//
+//  !THIS IS NOW DEPRCIATED 
+//
+//  IF YOU DO REQUIRE THIS FILE YOU NEED TO UNCOMMENT THE PHP
+//  IN TEMPLATES > SYSTEM > HTML.tpl.php
+//  
+//    
+// ============================================================ */
+
+// 0. Utility functions, Variables and mixins ==============================
+//   - not output in to css
+@import "less_core/utils.less";
+@import "less_core/variables.less";
+@import "less_core/mixins.less";
+
+/*// 1. Components media queries ==============================
+// Include all your component _m.less files and the utlity function will extract the media queries
+
+// 1.2. Roles		 -------------------------------------
+// e.g banner, main, navigation, contentinfo
+// 0. Banner			==============================
+@import "components/roles/banner_m.less";
+
+// 1. Main 			==============================
+//@import "roles/main_m.less";
+
+// 2. Navigation 			==============================
+@import "components/roles/navigation_m.less";
+
+// 3. Footer 				==============================
+@import "components/roles/footer_m.less";
+
+// 4. Search 				==============================
+@import "components/roles/search_m.less";
+
+
+// 1.3. Layout components -------------------------------------
+
+// 0. Media Object		    ==============================
+@import "components/layout/media-object_m.less";
+
+// 1. Grids		        ==============================
+@import "components/layout/grids_m.less";
+
+// 2. Tiles		        ==============================
+@import "components/layout/tile_m.less";
+
+
+// 1.4. Drupal specific -------------------------------------
+
+// 0. Webforms		        ==============================
+@import "components/drupal/webform_m.less";
+
+// 1. Pager		             ==============================
+@import "components/drupal/pager_m.less";
+
+// 2. Drupal Admin		     ==============================
+@import "components/drupal/admin_m.less";
+
+// 3. Drupal Cookie		     ==============================
+@import "components/drupal/cookie_m.less";
+
+// 4. Drupal Modules		     ==============================
+@import "components/drupal/d-module_m.less";
+
+
+// 1.5. Nuts and Bolts ---------------------------------------------
+
+// !logo 				==============================
+@import "components/parts/logo_m.less";
+
+// !headers 				==============================
+@import "components/parts/header_m.less";
+
+// !headings 				==============================
+@import "components/parts/headings_m.less";
+
+// !wrappers 				==============================
+@import "components/parts/wrappers_m.less";
+
+// !buttons 				==============================
+@import "components/parts/buttons_m.less";
+
+// !breadcrumbs 				==============================
+@import "components/parts/breadcrumbs_m.less";
+
+// 1.6. Section style components ------------------------------------
+// 0. !Sections 		        ==============================
+@import "components/section-styles/sections_m.less";
+
+// 1. !Splash Banners 		==============================
+@import "components/section-styles/style-banner_m.less";
+
+// 2. !Text  		        ==============================
+@import "components/section-styles/style-text_m.less";
+
+// 3. Media 		        =============================
+@import "components/section-styles/style-media_m.less";
+
+// 4. !Feed  		        ==============================
+@import "components/section-styles/style-feed_m.less";
+
+// 1.7. Project specific components ---------------------------------
+
+// 0. !Infographics 	        ==============================
+@import "components/parts/infographic_m.less";
+
+// 2. Behaviours media queries ==============================
+@import "behaviour/panel-drop-down-nav.less";
+@import "behaviour/banner-video.less";
+
+// 3. Plugins media queries ==============================
+@import "plugins/slick.less";
+@import "plugins/slick-theme.less";
+
+*/
+
+// 3. Variables to adjust styles for IE8 ====================
+@old-ie: true;
+//must be same unit as all the other media queries  
+@fix-mqs: 64em; // 1024px
+@fix-max: 78em; // 1280px
+
+// give ie8 some boundaries
+.wrapper--page {
+    min-width: @fix-mqs;
+    max-width: @fix-max;
+}
+
+// 4. Behaviours - js that IE8 will support =================
+
+
+// 5. Hacks - sort out IE8 specific issues ==================
+

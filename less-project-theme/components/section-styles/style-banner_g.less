@@ -1,0 +1,105 @@
+// out: null
+
+// global styles 
+/* !Banners --------------------------------------------------- 
+    d-sections splash banners normally full width banners
+*/
+
+/* clases
+
+.d-section--style-banner (the section__wrapper)
+
+//Children
+.o-splash
+.o-splash__wrapper  
+.o-splash__hgroup
+.o-splash__text
+
+.o-splash__anchor
+.anchor--left, .anchor--center, .anchor--right
+.o-splash__filter
+.filter--style-1 (darkens image 10%)
+
+.o-splash__figure-group (normally a holder for a group of info graphics
+
+//modififers 
+.title--splash
+.subtitle--splash
+
+
+
+*/
+
+// default for banner is centered text
+.d-section--style-banner {
+        margin: 0;
+        padding: 0;
+
+        .clearfix(); 
+        overflow: hidden; // hide everyting outside this
+        
+}
+
+
+.o-splash {
+    margin-bottom: 1px;
+    color: @white;
+    background: @basecolor;  
+    text-align: center;
+}
+
+.o-splash__anchor {
+    position: relative;  
+}
+
+.o-splash img {
+    margin: 0 auto; 
+}
+
+.o-splash__wrapper {
+    padding: 1.5em;   
+}
+
+.o-splash__text {
+    margin: 0 auto;
+    max-width: 30em;
+       
+}
+
+.o-splash__icon {
+    margin: 0 auto 0.75em; 
+    width: 3em;
+}
+
+// Typography 
+.title--splash {
+    margin-top: 0;
+}
+
+
+// Component in situ 
+
+// Align everything left
+.d-section--alignment-left .o-splash {
+       text-align: left;
+}
+
+.d-section--alignment-left .o-splash__text, .d-section--alignment-left .o-splash__icon {
+       margin-left: 0;
+}
+
+//Align it all right 
+.d-section--alignment-right .o-splash {
+       text-align: right;
+}
+
+.d-section--alignment-right .o-splash__text, .d-section--alignment-right .o-splash__icon {
+       margin-right: 0;
+}
+
+
+
+//Tall / Short / Other styles 
+//Tall default
+//d-section--style-banner-1|Short
+//d-section--style-banner-2|Free

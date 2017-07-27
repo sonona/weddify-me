@@ -1,0 +1,4 @@
+name = Weddify
+description = Weddify Me theme
+core = 7.x
+base theme = common

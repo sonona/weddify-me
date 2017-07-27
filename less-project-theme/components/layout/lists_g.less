@@ -1,0 +1,50 @@
+// out: null
+/* ============================================================
+
+    Big Mallet's Mallet - Extended
+    Lists
+	Version: 3.1
+	
+    Layout for lists
+
+============================================================ */
+// global styles 
+
+/* clases
+.o-list (usually a ul or ol)
+.o-list__item (li)
+
+//Modifiers ---------------
+
+.list--logos (for partner logos)
+*/
+
+.o-list {
+    padding-left: 0;
+    list-style-type: none;
+}
+
+.o-list__item img {
+    width: auto;
+}
+
+.list--logos .o-list__item {
+    margin-top: 0;
+    display: inline-block;
+    .inline-block();
+    position: relative;
+}
+
+.list--logos .o-list__item a {
+    .hide-text();
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: @zindex-simple--front;
+}
+
+
+
+// Component in situ 

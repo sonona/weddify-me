@@ -1,0 +1,125 @@
+// out: null
+// Media Queries for component
+
+/* !navigation --------------------------------------------------- */
+/* clases
+.navigation (generic class based on role="navigation")
+.navigation (generic class based on role="navigation")
+
+.global-nav (site menu)
+.utility-menu (secondary menu)
+
+.menu (generic menu)
+.menu li 
+.menu li a
+
+.menu .menu (sub-menu)
+
+*/
+
+// 320 major layout change to navigation ========================
+.min-width(20em; {
+// Panel Menu (See behaviour > panel-drop-down-nav) 
+    
+// If something has a panel modifier this is where there postion starts
+
+ 
+// Coloring 
+.panel ul {
+    background: darken(@basecolor, 10%);
+        
+}   
+    
+.panel ul a {
+   color: @whiteonblack;
+    &:hover {
+        color: @white;
+    }
+}  
+    
+//end 320px major
+});
+
+
+
+// 768 major layout change to navigation ========================
+.min-width(48em; {
+
+/* Menu toggle ---------------------------- */
+// this is the menu button to link to nav on very small devices or when there is no js on small devices
+.menu-toggle .toggle-control {
+        //all imutable don't want overidden
+        margin-top: 0 !important;
+        text-indent: -99em !important;
+        position: absolute !important;
+        top: 0 !important;
+        z-index: -1 !important;
+        overflow: hidden !important;
+        
+    &:active, &:focus {
+        text-indent: 0 !important;
+        z-index: @zindex-overlay !important;
+    }
+        
+}
+    
+// navigation (role='navigation' -----------------------------
+.navigation {
+        width: 100%;
+        position: absolute;
+        top: 10.75em;
+        z-index: @zindex-nav;
+}
+    
+.navigation__wrapper {
+    //match banner wrapper 
+    .seven-eighths();
+    position: relative;
+}
+
+    
+.navigation .menu {
+    display: table;
+    
+}
+    
+.navigation .menu li {
+    display: table-cell;
+}
+    
+//Submenu -------------------
+// for testing 
+    //.navigation .menu .menu {
+    // display: none; 
+//}
+    
+
+// global navigation -------------------
+    
+.navigation__global-nav > .menu {
+    .one-half();
+}
+    
+// utility navigation -------------------
+.navigation__utility-nav {
+    position: absolute;
+    top: -9.25em;
+    right: 0;
+}
+
+.navigation__utility-nav > .menu {
+    .one-whole();
+}
+
+//end 768 major
+});
+
+// Media Queries for component in situ 
+// navigation menu --------------------------------
+
+
+// contentinfo menu --------------------------------
+
+
+
+

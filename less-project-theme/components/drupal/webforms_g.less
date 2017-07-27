@@ -1,0 +1,150 @@
+// out: null
+
+// global styles 
+/* !webforms --------------------------------------------------- */
+// Styles for DRUPAL FORMS
+// EXtends Forms
+
+/* clases
+
+basic mark up
+- <div .webform-component
+--- label
+----- input (form-text, form-textarea, form-select, form-email)
+- </div>
+*/
+
+/*types
+-markup (area code)
+-select
+-textfield
+-number (same as textfield)
+-textarea
+-checkboxes
+-radio
+-permission (text area)
+-date
+*/
+
+/*///////////////////////////////////////////////////////////
+
+    Webforms
+
+//////////////////////////////////////////////////// */
+
+//-markup and permision working
+.webform-component-markup p, .webform-component-permission p {
+    margin: 0;
+    .milli--margin();
+    //font-size: 1em;
+    color: inherit;
+}
+
+.webform-component-markup p, .webform-component-permission p {
+    &:first-child {
+        margin-top: 0; // match line height
+    }
+}
+
+// Hide the date piccker for now
+.webform-calendar {
+    .hidden();
+}
+
+//Newsletter form -----------------------------------
+//variant webform component used in the footer
+.contentinfo__newsletter {
+    margin-top: 2em;
+    
+}
+
+.placeholder .contentinfo__newsletter label {
+    .visually-hidden();
+}
+
+.contentinfo__newsletter .webform-component input {
+    padding: 0.78571428571429em 0.5em 0.64285714285714em 0;
+    height: 3.14285714285714em; //44px
+    border: 0;
+    border-bottom: 0.14285714285714em solid @highlight--color-1; //2px border width
+    background: transparent;
+    color: inherit;    
+    .placeholder(lighten(@highlight--color-1,5%));
+    &:hover{
+        border-color : darken(@highlight--color-1, 5%)
+    }
+        &:active, &:focus {
+        border-color : inherit;
+        outline: 0;
+    } 
+}
+
+.contentinfo__newsletter .webform-submit {
+       border: 0;
+       background: @highlight--color-1;
+        &:hover, &:active, &:focus {
+        background-color : darken(@highlight--color-1, 5%);
+        }
+     
+}
+
+
+// SEE MODULE FOR BIG PAYMENT STYLING
+
+// SITE SPECIFIC ----------------------------------
+
+// Donate form ---------------------------------
+// Donate form currently uses webforms but this wil change in future versions
+
+/* Classes
+webform-client-form--donation
+
+// Also use the big pament module 
+
+.big_payment
+
+.big_payment__message
+-.big_payment__body
+-.big_payment__title
+--- .title__emphasis
+-.big_payment__text
+
+-.big_payment__article
+-.big_payment__media
+
+
+
+*/
+
+/* 
+// Donate form styling ---
+.webform-client-form--donation {
+    margin: 0 auto;
+    max-width: 64em;
+}
+
+// Site specific may be add a form__wrapper to these as this is UGLY
+.webform-client-form--donation .form__wrapper, .webform-client-form--donation .form-actions {
+    margin-left: auto;
+    margin-right: auto;
+    .themeasureform();
+}
+
+
+.webform-client-form--donation .form-submit {
+    border-color : @highlight--color-5-acc;
+    background-color : @highlight--color-5-acc;
+    &:hover {
+        border-color : darken(@highlight--color-5-acc, 2%);
+        background-color : darken(@highlight--color-5-acc, 2%);
+    }
+    &:active, &:focus {
+        border-color: darken(@highlight--color-5-acc, 6%);
+        background-color: darken(@highlight--color-5-acc, 6%);
+    }
+}*/
+
+
+
+
+

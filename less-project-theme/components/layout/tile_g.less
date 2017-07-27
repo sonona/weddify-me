@@ -1,0 +1,91 @@
+// out: null
+/* ============================================================
+
+    Big Mallet's Mallet - Extended
+    Tile
+	Version: 3.1
+	
+    Layout for tiles
+
+============================================================ */
+
+/* global =================================================== */
+//Some defaults colors text etc..
+// .o-tile -- container
+// .o-tile__item - the media item e.g. image
+// .o-tile__body - the media text 
+//.o-tile__icon
+
+// Typography
+//.o-tile__title
+//.o-tile__subtitle
+//.o-tile__text
+
+
+//modifiers 
+// .tile--generic-feed
+// .tile--feed-items
+
+
+.o-tile {
+    //display: block;
+    text-align: center;
+}
+
+.o-tile__item {
+    overflow:hidden;
+}
+
+.o-tile img {
+    display: block;
+    margin: 0 auto;
+}
+
+.o-tile__body {
+    padding: 1.5em;
+    overflow: hidden;  
+    // for testing 
+    border: 1px solid #ccc;
+}
+
+.o-tile__title {
+    .gamma--margin ();
+      text-transform: uppercase; 
+    font-weight: 600;
+    .letterspacing60();
+}
+
+.o-tile__subtitle {
+    text-transform: capitalize;
+    font-style: italic;
+    font-weight: 300;
+}
+
+.o-tile__text {
+    margin: 0 auto;
+    max-width: 24em;
+    color: @grey--light-4;   
+}
+
+.o-tile__btn {
+    // for testing 
+   border: 1px solid #ccc;
+}
+
+
+//elements in situe
+//.d-section--alignment-none (image above text default)
+//.d-section--alignment-center(image on top with text centered)
+//.d-section--alignment-left (media floated left)
+//.d-section--alignment-right (media floated right)
+
+
+
+// SITE SPECIFIC TWEAKS =================================================== 
+
+
+
+
+
+// end base
+

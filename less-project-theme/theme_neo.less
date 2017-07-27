@@ -1,0 +1,148 @@
+// out: ../css/theme_neo.css, compress: true, strictMath: true
+
+/* ============================================================
+
+    Big Mallet's Matrix project theme all styles
+	Version: 3.0
+	URL: http://bigmallet.co.uk
+	Made from bits and pieces from the internet. 
+	
+	Full Styles for single handed builds
+    
+
+============================================================ */
+
+//0. Utility functions, Variables and mixins ==============================
+//   - not output in to css
+@import "less_core/utils.less";
+@import "less_core/variables.less";
+@import "less_core/mixins.less";
+
+// 1. base for all browsers        ==============================
+@import "base/base.less";
+
+// 2. Global styles for all browsers        ==============================
+@import "global/global_styles.less";
+
+// 3.  Roles		          -------------------------------------
+// e.g banner, main, navigation, contentinfo
+// 3.0 Banner			==============================
+@import "components/roles/banner_g.less";
+@import "components/roles/banner_m.less";
+
+// 3.1 Main 			==============================
+//@import "roles/main_g.less";
+//@import "roles/main_m.less";
+
+// 3.2 Navigation 			==============================
+@import "components/roles/navigation_g.less";
+@import "components/roles/navigation_m.less";
+
+// 3.3 Footer 				==============================
+@import "components/roles/footer_g.less";
+@import "components/roles/footer_m.less";
+
+// 3.4 Search 				==============================
+@import "components/roles/search_g.less";
+@import "components/roles/search_m.less";
+
+
+// 4. Layout components -------------------------------------
+
+// 4.0 Media Object		    ==============================
+@import "components/layout/media-object_g.less";
+@import "components/layout/media-object_m.less";
+
+// 4.1 Grids		        ==============================
+@import "components/layout/grids_g.less";
+@import "components/layout/grids_m.less";
+
+// 4.2 Tiles		        ==============================
+@import "components/layout/tile_g.less";
+@import "components/layout/tile_m.less";
+
+
+// 5. Drupal specific -------------------------------------
+
+// 5.0. Webforms		        ==============================
+@import "components/drupal/webform_g.less";
+@import "components/drupal/webform_m.less";
+
+// 5.1. Pager		             ==============================
+@import "components/drupal/pager_g.less";
+@import "components/drupal/pager_m.less";
+
+// 5.2. Drupal Admin		     ==============================
+@import "components/drupal/admin_g.less";
+@import "components/drupal/admin_m.less";
+
+// 5.3. Drupal Cookie		     ==============================
+@import "components/drupal/cookie_g.less";
+@import "components/drupal/cookie_m.less";
+
+// 5.4. Drupal Modules		     ==============================
+@import "components/drupal/d-module_g.less";
+@import "components/drupal/d-module_m.less";
+
+// 6. Nuts and Bolts ---------------------------------------------
+
+// !logo 				==============================
+@import "components/parts/logo_g.less";
+@import "components/parts/logo_m.less";
+
+// !headers 				==============================
+//@import "components/parts/header_g.less";
+//@import "components/parts/header_m.less";
+
+// !headings 				==============================
+@import "components/parts/headings_g.less";
+@import "components/parts/headings_m.less";
+
+// !wrappers 				==============================
+@import "components/parts/wrappers_g.less";
+@import "components/parts/wrappers_m.less";
+
+// !buttons 				==============================
+@import "components/parts/buttons_g.less";
+@import "components/parts/buttons_m.less";
+
+// !breadcrumbs 				==============================
+@import "components/parts/breadcrumbs_g.less";
+@import "components/parts/breadcrumbs_m.less";
+
+// 7. Section style components ------------------------------------
+// 7.0. !Sections 		        ==============================
+@import "components/section-styles/sections_g.less";
+@import "components/section-styles/sections_m.less";
+
+// 7.1. !Splash Banners 		==============================
+@import "components/section-styles/style-banner_g.less";
+@import "components/section-styles/style-banner_m.less";
+
+// 7.2. !Text  		        ==============================
+@import "components/section-styles/style-text_g.less";
+@import "components/section-styles/style-text_m.less";
+
+// 7.3. Media 		        =============================
+//@import "components/section-styles/style-media_g.less";
+//@import "components/section-styles/style-media_m.less";
+
+// 7.4. !Feed  		        ==============================
+@import "components/section-styles/style-feed_g.less";
+@import "components/section-styles/style-feed_m.less";
+
+
+// 8. Project specific components ---------------------------------
+
+// 8.0. !Infographics 	        ==============================
+@import "components/parts/infographic_g.less";
+@import "components/parts/infographic_m.less";
+
+// 8.2. Behaviours media queries ==============================
+@import "behaviour/off-canvas.less";
+@import "behaviour/panel-drop-down-nav.less";
+@import "behaviour/banner-video.less";
+
+// 8.3. Plugins media queries ==============================
+@import "plugins/flexslider_g.less";
+@import "plugins/flexslider_m.less";
