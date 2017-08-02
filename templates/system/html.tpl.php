@@ -69,7 +69,7 @@
   // load fonts for everything except ie6-7
   WebFontConfig = {
   google: {
-    families: ['Open+Sans:400,600,700', 'Cookie' ]
+    families: ['Open+Sans:400,600,700' ]
   }	
   };
   
