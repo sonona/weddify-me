@@ -29,19 +29,6 @@
 
 //only for browsers that can cope with this so from 300px up 
 .min-width(@small_major {
-
-//Specific checkboxes
-.form--gig .form-type-checkboxes {
-        .clearfix();
-}
-
-.form--gig .form-checkboxes .form-type-checkbox {
-        margin: @gutter @gutter 0 0;
-        padding: 0.375em;
-        background: @whiteonblack;
-        float: left;
-        
-}
     
 
 //Specific date selects
@@ -76,39 +63,6 @@
     }
 }
     
-    
-/*// Gift Aid compontent -------------------------------------------
-// Mark up 
-<fieldset class="webform-component-fieldset webform-component--step-2--gift-aid-details fieldset fieldset--gift-aid">
-<legend><span class="fieldset__legend">
-<div class="fieldset__description description">
-</div>
-<div class="form-item webform-component webform-component-markup webform-component--step-2--gift-aid-details--gift-aid-text">
- <p>
-<div class="form-item webform-component webform-component-checkboxes webform-component--step-2--gift-aid-details--gift-aid">
-  <label for="edit-submitted-step-2-gift-aid-details-gift-aid">
- <div id="edit-submitted-step-2-gift-aid-details-gift-aid" class="form-checkboxes"><div class="form-item form-type-checkbox form-item-submitted-step-2-gift-aid-details-gift-aid-1">
- <input type="checkbox" id="edit-submitted-step-2-gift-aid-details-gift-aid-1" name="submitted[step_2][gift_aid_details][gift_aid][1]" value="1" class="form-checkbox">
-<label class="option" for="edit-submitted-step-2-gift-aid-details-gift-aid-1">
-*/
-
-.fieldset--gift-aid {
-    //match style of form input
-    padding: 4em 0.625em 0.375em; //6px 10px 
-    border : 1px @inputborderstyle @inputborder;
-    background: transparent url(../../music/img/skin/logo/giftaid/giftaid_logo.gif) top left no-repeat;
-     &:hover {
-        border-color: @inputborder--hover;
-    }
-}
-    
-.fieldset--gift-aid  .fieldset__legend {
-        .visually-hidden();
-}
-    
-.fieldset--gift-aid .fieldset__description {
-    font-weight: 700;    
-}
     
 /////////////////////////////////////////////////////
     
@@ -168,4 +122,25 @@
 }  
 
 //end @small_major
+});
+
+
+//To do list
+.min-width(48em {
+    .form--wedtodo .form-type-checkbox{
+        position: relative;
+        width: 25em;
+    }
+
+    .form--wedtodo .form-type-checkbox .description{
+        position: absolute;
+        right: -7em;
+        top: -2px;
+        font-size: 1em;
+    }
+    
+    .form--wedtodo .form-type-checkbox .description .when__label{
+        display: none;
+    } 
+    
 });

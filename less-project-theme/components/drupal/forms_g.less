@@ -42,9 +42,11 @@ legend span {
     //text styles
     color: @basecolor;
     .zeta--margin ();
-    font-weight: 700;
-    text-transform: uppercase; 
+    font-weight: 400;
+    font-size: 1.9375em;
     cursor: pointer;
+    font-family: 'Cookie',sans-serif;
+    
 }
 
 //fieldset fieldset legend 
@@ -397,21 +399,31 @@ display : none; }
     
 }
 
-/*// Gift Aid compontent -------------------------------------------
-// Mark up 
-<fieldset class="webform-component-fieldset webform-component--step-2--gift-aid-details fieldset fieldset--gift-aid">
-<legend><span class="fieldset__legend">
-<div class="fieldset__description description">
-</div>
-<div class="form-item webform-component webform-component-markup webform-component--step-2--gift-aid-details--gift-aid-text">
- <p>
-<div class="form-item webform-component webform-component-checkboxes webform-component--step-2--gift-aid-details--gift-aid">
-  <label for="edit-submitted-step-2-gift-aid-details-gift-aid">
- <div id="edit-submitted-step-2-gift-aid-details-gift-aid" class="form-checkboxes"><div class="form-item form-type-checkbox form-item-submitted-step-2-gift-aid-details-gift-aid-1">
- <input type="checkbox" id="edit-submitted-step-2-gift-aid-details-gift-aid-1" name="submitted[step_2][gift_aid_details][gift_aid][1]" value="1" class="form-checkbox">
-<label class="option" for="edit-submitted-step-2-gift-aid-details-gift-aid-1">
-*/
+//Checkboxes
 
+.form--wedtodo input:checked + label{
+    text-decoration: line-through;
+}
 
+.form-type-checkbox label{
+    display: inline;
+    font-size: 1em;
+    vertical-align: top;
+}
+
+.form-type-checkbox input{
+    width: 1.25em;
+    height: 1.25em;
+}
+
+.form--wedtodo .form-type-checkbox .description{
+    color: #0a687b;
+}
+
+//Legend form specific
+
+.form--wedtodo legend{
+    margin-bottom: 0.5em;
+}
 
 
