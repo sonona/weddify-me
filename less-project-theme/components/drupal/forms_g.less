@@ -427,3 +427,63 @@ display : none; }
 }
 
 
+//To do list
+
+.form__wedtodo--full .task{
+    padding: 1em;
+    border: 1px solid lightblue;
+    margin-bottom: 1em;
+}
+
+.form__wedtodo--full .task-info--text{
+    font-size: 16px;
+}
+
+.task__task-info{
+    display: none;
+}
+
+.task-info--additional{
+    font-size: 13px;
+}
+
+.task__notes .task__notes-area{
+    max-height: 15em;
+    overflow: hidden;
+    -webkit-transition: max-height ease-in-out .25s;
+    -moz-transition: max-height ease-in-out .25s;
+    -o-transition: max-height ease-in-out .25s;
+    transition: max-height ease-in-out .25s; 
+}
+
+.task__notes.closed .task__notes-area{
+    max-height: 0em;
+    overflow: hidden;
+    -webkit-transition: max-height ease-in-out .25s;
+    -moz-transition: max-height ease-in-out .25s;
+    -o-transition: max-height ease-in-out .25s;
+    transition: max-height ease-in-out .25s; 
+}
+
+.task__notes--button{
+    cursor: pointer;
+    position: relative;
+}
+
+.task__notes--button:after{
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: 3.25em;
+    top: 0.625em;
+    border-style: solid;
+    border-width: 8px 4px 0 4px;
+    border-color: #10a2bd transparent transparent transparent;
+}
+
+.task__notes.closed .task__notes--button:after{
+    border-width: 4px 0 4px 8px;
+    border-color: transparent transparent transparent #10a2bd;
+}
