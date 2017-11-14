@@ -443,6 +443,12 @@ display : none; }
     border: 1px solid white;
 }
 
+.task.task--closed{
+    .task__assigned, .task__notes, .task__task-tips, .task__footer{
+        display: none;
+    }
+}
+
 .form__wedtodo--full .task.task--closed .task__task-date{
     background-color: #888;
     color: white;
@@ -456,14 +462,28 @@ display : none; }
     content: "";
     background-image: url("/sites/default/files/icons/Icon-rings.png");
     display:block;
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     background-size: contain;
     background-color: white;
     border-radius: 50%;
     position: absolute;
-    top: 0.65em;
-    right: 0.65em;
+    top: 0.35em;
+    left: 0.35em;
+}
+
+.form__wedtodo--full .task.task--closed:before{
+    content: "";
+    background-image: url("/sites/default/files/icons/Green tick.png");
+    display:block;
+    width: 25px;
+    height: 25px;
+    background-size: contain;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 0.35em;
+    left: 0.35em;
 }
 
 //Text
@@ -476,7 +496,7 @@ display : none; }
 }
 
 .task__task-info{
-    padding: 1em;
+    padding: 1em 1em 0 1em;
 }
 
 .task__task-info--full{
@@ -485,6 +505,7 @@ display : none; }
 
 .task-info--additional{
     font-size: 13px;
+    margin-top: 0;
 }
 
 .js .task__notes .task__notes-area{
@@ -508,6 +529,7 @@ display : none; }
 .task__notes--button{
     cursor: pointer;
     position: relative;
+    font-size: .8125em;
 }
 
 .task__notes--button:after{
@@ -519,12 +541,12 @@ display : none; }
     left: 3.25em;
     top: 0.625em;
     border-style: solid;
-    border-width: 8px 4px 0 4px;
+    border-width: 6px 3px 0 3px;
     border-color: #10a2bd transparent transparent transparent;
 }
 
 .task__notes.closed .task__notes--button:after{
-    border-width: 4px 0 4px 8px;
+    border-width: 3px 0 3px 6px;
     border-color: transparent transparent transparent #10a2bd;
 }
 
@@ -540,22 +562,28 @@ display : none; }
 
 .task__task-date{
     padding: 0.5em;
-    background: lightblue;
-    font-size: 0.8125em;
-    color: #333;
+    background: #10a2bd;
+    font-size: 0.875em;
+    color: white;
     border-top-right-radius: 0.5em;
     border-top-left-radius: 0.5em;
+    padding-left: 2.75em;
+}
+
+.task-info__start, .task-info__complete{
+    font-weight: bold;
 }
 
 //Status
 
-.task__task-status, .task__assigned, .task__task-tips, .task__notes{
+.task__task-status, .task__assigned, .task__notes{
     padding: 0.25em 1em; 
 }
 
-.task-tips--full{
-    display: none;
+.task__task-tips{
+    padding: 0.5em 1em;
 }
+
 
 .task__tips-title{
     color: #10a2bd;
