@@ -126,6 +126,8 @@
 
 
 //To do list
+//768px
+
 .min-width(48em {
     .form--wedtodo .form-type-checkbox{
         position: relative;
@@ -142,5 +144,53 @@
     .form--wedtodo .form-type-checkbox .description .when__label{
         display: none;
     } 
+    
+});
+
+//Full to do list
+//480px
+.min-width(30em {
+    .task__notes{
+        max-width: 17em;
+    }
+    
+    .task__task-status select, .task__assigned input{
+        float:none;
+    }
+    
+    .task__task-status label, .task__assigned label{
+        float: none;
+        top: 0;
+    }
+    
+    .task__task-status, .task__assigned{
+        float: left;
+        width: 11em;
+    }
+    
+    .status-assign-group:after{
+        content: "";
+        display: block;
+        clear: both;
+    }
+    
+    .task__notes--button p{
+        margin-top: 0;
+    }
+    
+});
+
+.min-width(48em {
+    .task-tips--mobile{
+        display: none;
+    } 
+    
+    .task-tips--full{
+        display: block;
+    }
+    
+    .task__task-tips p{
+        margin: 0 0 1em 0;
+    }
     
 });
