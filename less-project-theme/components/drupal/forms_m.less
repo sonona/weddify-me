@@ -124,49 +124,14 @@
 //end @small_major
 });
 
-
-//To do list
-//768px
-
-.min-width(48em {
-    .form--wedtodo .form-type-checkbox{
-        position: relative;
-        width: 25em;
-    }
-
-    .form--wedtodo .form-type-checkbox .description{
-        position: absolute;
-        right: -7em;
-        top: -2px;
-        font-size: 1em;
-    }
-    
-    .form--wedtodo .form-type-checkbox .description .when__label{
-        display: none;
-    } 
-    
-});
-
 //Full to do list
 //480px
 
 .min-width(30em {
-    .task__notes{
-        max-width: 17em;
-    }
     
-    .task__task-status select, .task__assigned input{
-        float:none;
-    }
-    
-    .task__task-status label, .task__assigned label{
-        float: none;
-        top: 0;
-    }
-    
-    .task__task-status, .task__assigned{
+   .task__task-status select, .task__assigned input{
+        width: 10em;
         float: left;
-        width: 11em;
     }
     
     .status-assign-group:after{
@@ -189,7 +154,27 @@
     }
 });
 
+
+//To do list
+//768px
+
 .min-width(48em {
+    .form--wedtodo .form-type-checkbox{
+        position: relative;
+        width: 25em;
+    }
+
+    .form--wedtodo .form-type-checkbox .description{
+        position: absolute;
+        right: -7em;
+        top: -2px;
+        font-size: 1em;
+    }
+    
+    .form--wedtodo .form-type-checkbox .description .when__label{
+        display: none;
+    } 
+
     .task-tips--mobile{
         display: none;
     } 
@@ -199,18 +184,28 @@
     }
     
     .task__task-tips p{
-        margin: 0 0 1em 0;
+        margin: 0;
     }
-    
+     
 });
+
+
 
 .min-width(51em {
     .task{
         max-width: 39.4em;
     }
     
-    .status-assign-group, .task__notes{
+    .task__notes-area .form-type-textarea{
+        max-width: 30em;
         float: left;
+    }
+    
+    .task__notes .task__save-task{
+        position: relative;
+        top: 5.1875em;
+        float: left;
+        left: 1em;
     }
     
     .task__footer, .task__task-tips{
@@ -221,3 +216,4 @@
         width: 35em;
     }
 });
+
