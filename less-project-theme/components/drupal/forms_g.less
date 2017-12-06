@@ -794,7 +794,7 @@ display : none; }
 //Tasks info section
 .tasks-info{
     border-bottom: 1px solid #10a2bd;
-    width: 11em;
+    width: 15em;
     margin-bottom: 2em;
     
 }
@@ -803,3 +803,40 @@ display : none; }
     margin-bottom: 1.25em;
 }
 
+.tasks-info ul li .info__count{
+    font-weight: bold;
+}
+
+.tasks-info ul li span{
+    font-weight: bold;
+}
+
+.tasks-info ul li:before{
+    content: "";
+    background-image: url("/sites/default/files/icons/Green tick.png");
+    display:block;
+    width: 25px;
+    height: 25px;
+    background-size: contain;
+    background-color: white;
+    border-radius: 50%;
+    float: left;
+    margin-right: 0.5em;
+}
+
+.tasks-info ul li:first-child:before{
+    background-image: url("/sites/default/files/icons/Icon-rings.png");
+}
+
+.tasks-info ul li:last-child span{
+    font-weight: normal;
+}
+
+.tasks-info ul li:last-child:before{
+    background-image: none;
+}
+
+.tasks-info ul li .info__label{
+    min-width: 9.5em;
+    display: inline-block;
+}
