@@ -748,7 +748,7 @@ display : none; }
     color: #EC6969;
     border-color: #EC6969;
     background-color: white;
--webkit-transition: background-color .25s linear;
+    -webkit-transition: background-color .25s linear;
     -moz-transition: background-color .25s linear;
     -o-transition: background-color .25s linear;
     -ms-transition: background-color .25s linear;
@@ -793,7 +793,7 @@ display : none; }
 
 //Tasks info section
 .tasks-info{
-    border-bottom: 1px solid #10a2bd;
+    //border-bottom: 1px solid #10a2bd;
     width: 15em;
     margin-bottom: 2em;
     
@@ -839,4 +839,133 @@ display : none; }
 .tasks-info ul li .info__label{
     min-width: 9.5em;
     display: inline-block;
+}
+
+//Filter
+.task__filter .form-type-checkboxes > label{
+    font-size: 1em;
+    cursor: pointer;
+    border-width: 0 0 1px 0;
+    border-style: solid;
+    border-color: #10a2bd;
+    padding-bottom: 0.5em;
+    width: 10em;
+    margin-bottom: 1em;
+    position: relative;
+}
+
+.task__filter .form-type-checkboxes > label:after{
+    display: block;
+    content: "";
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    right: 0;
+    background-image: url(../img/skin/icons/weddify-icons-sprite.png);
+    background-position: -7px -972px;
+    top: 3px;
+}
+
+.js .task__filter{
+    max-height: 3em;
+    overflow: hidden;
+    margin-bottom: 2em;
+    -webkit-transition: max-height .15s linear;
+    -moz-transition: max-height .15s linear;
+    -o-transition: max-height .15s linear;
+    -ms-transition: max-height .15s linear;
+    transition: max-height .15s linear; 
+}
+
+.js .task__filter.expand{
+    max-height: 25em;
+} 
+
+.task__filter.expand .form-type-checkboxes > label:after{
+    background-position: -55px -972px;
+}
+
+//Sort
+
+.form-item-sort-tasks{
+    margin-bottom: 2em;
+}
+
+.form-item-sort-tasks.form-type-radios > label{
+    font-size: 1em;
+    border-width: 0 0 1px 0;
+    border-style: solid;
+    border-color: #10a2bd;
+    padding-bottom: 0.5em;
+    margin-bottom: 1em;
+    width: 10em;
+    
+}
+
+
+
+.form-item-sort-tasks .form-type-radio input{
+    display: none;
+}
+
+.form-item-sort-tasks .form-type-radio label{
+    background: white;
+    border: 1px solid #10a2bd;
+    padding: 1em;
+    display: block;
+    font-size: 0.875em;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    -webkit-transition: opacity .15s linear;
+    -moz-transition: opacity .15s linear;
+    -o-transition: opacity .15s linear;
+    -ms-transition: opacity .15s linear;
+    transition: opacity .15s linear; 
+} 
+
+.form-item-sort-tasks .form-type-radio input:checked + label{
+    background: #10a2bd;
+    color: white;
+}
+
+.form-item-sort-tasks .form-type-radio input:focus + label{
+    opacity: 0.8;
+    background: #10a2bd;
+    color: white;
+}
+
+.form-item-sort-tasks .form-type-radio input:active + label{
+    opacity: 0.8;
+    color: white;
+    background: #10a2bd;
+}
+
+.form-item-sort-tasks .form-type-radio input:hover + label{
+    opacity: 0.9;
+    color: white;
+    background: #10a2bd;
+}
+
+.form-item-sort-tasks .form-radios{
+    display: block;
+    width: 15em;
+}
+
+.form-item-sort-tasks .form-radios:after{
+    clear:both;
+    display: block;
+    content: "";
+}
+
+.form-item-sort-tasks .form-type-radio{
+    float: left;
+    width: 7em;
+    margin: 0 0.25em;
+}
+
+//Task expand
+
+.form-item-task-expand{
+    
 }
