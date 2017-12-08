@@ -408,7 +408,8 @@ display : none; }
 .form-type-checkbox label{
     display: inline;
     font-size: 1em;
-    vertical-align: top;
+    top: -4px;
+    position: relative;
 }
 
 .form-type-checkbox input{
@@ -793,10 +794,9 @@ display : none; }
 
 //Tasks info section
 .tasks-info{
-    //border-bottom: 1px solid #10a2bd;
+    border-bottom: 1px solid #10a2bd;
     width: 15em;
-    margin-bottom: 2em;
-    
+    margin-bottom: 2em;   
 }
 
 .tasks-info ul{
@@ -841,15 +841,15 @@ display : none; }
     display: inline-block;
 }
 
-//Filter
+//Filter 
 .task__filter .form-type-checkboxes > label{
     font-size: 1em;
     cursor: pointer;
-    border-width: 0 0 1px 0;
-    border-style: solid;
-    border-color: #10a2bd;
-    padding-bottom: 0.5em;
-    width: 10em;
+    background: #878787;
+    color: white;
+    font-weight: bold; 
+    padding: 0.5em;
+    width: 15em;
     margin-bottom: 1em;
     position: relative;
 }
@@ -860,14 +860,14 @@ display : none; }
     height: 30px;
     width: 30px;
     position: absolute;
-    right: 0;
+    right: 6px;
     background-image: url(../img/skin/icons/weddify-icons-sprite.png);
     background-position: -7px -972px;
-    top: 3px;
+    top: 8px;
 }
 
 .js .task__filter{
-    max-height: 3em;
+    max-height: 2.625em;
     overflow: hidden;
     margin-bottom: 2em;
     -webkit-transition: max-height .15s linear;
@@ -883,6 +883,15 @@ display : none; }
 
 .task__filter.expand .form-type-checkboxes > label:after{
     background-position: -55px -972px;
+}
+
+.task__filter{
+    width: 15em;
+    border: 1px solid #878787;
+}
+
+.task__filter .form-checkboxes{
+    margin-left: 0.5em;
 }
 
 //Sort
@@ -959,9 +968,7 @@ display : none; }
 }
 
 .form-item-sort-tasks .form-type-radio{
-    float: left;
-    width: 7em;
-    margin: 0 0.25em;
+    width: 100%;
 }
 
 //Task expand
