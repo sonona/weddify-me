@@ -407,7 +407,7 @@ display : none; }
 
 .form-type-checkbox label{
     display: inline;
-    font-size: 1em;
+    font-size: 0.875em;
     top: -4px;
     position: relative;
 }
@@ -415,6 +415,13 @@ display : none; }
 .form-type-checkbox input{
     width: 1.25em;
     height: 1.25em;
+}
+
+.form-type-radio label{
+    display: inline;
+    font-size: 0.875em;
+    top: -3px;
+    position: relative;
 }
 
 .form--wedtodo .form-type-checkbox .description{
@@ -632,14 +639,14 @@ display : none; }
     clear: both;
 }
 .task__task-status select, .task__assigned input{
-    width: 10em;
+    width: 9em;
     float: left;
 }
 
 .task__task-status label, .task__assigned label{
     float: left;
     font-size: 0.8125em;
-    width: 5em;
+    width: 3.25em;
     position: relative;
     top: 0.9em;
 }
@@ -721,8 +728,8 @@ display : none; }
      left: 4.15em;
 }
 
-.tasks--na, .tasks--closed{
-    .open legend:before{
+.tasks--na.open, .tasks--closed.open{
+    legend:before{
         border-width: 8px 4px 0 4px;
         border-color: #10a2bd transparent transparent transparent;
     }
@@ -795,28 +802,30 @@ display : none; }
 //Tasks info section
 .tasks-info{
     border-bottom: 1px solid #10a2bd;
-    width: 15em;
-    margin-bottom: 2em;   
+    width: 10em;
+    margin-bottom: 2em;  
+    font-family: 'Cookie', sans-serif;
+    font-size: 26px;
 }
 
 .tasks-info ul{
     margin-bottom: 1.25em;
 }
 
-.tasks-info ul li .info__count{
+/*.tasks-info ul li .info__count{
     font-weight: bold;
 }
 
 .tasks-info ul li span{
     font-weight: bold;
-}
+}*/
 
 .tasks-info ul li:before{
     content: "";
     background-image: url("/sites/default/files/icons/Green tick.png");
     display:block;
-    width: 25px;
-    height: 25px;
+    width: 35px;
+    height: 35px;
     background-size: contain;
     background-color: white;
     border-radius: 50%;
@@ -837,24 +846,44 @@ display : none; }
 }
 
 .tasks-info ul li .info__label{
-    min-width: 9.5em;
+    min-width: 6.5em;
     display: inline-block;
 }
 
-//Filter 
-.task__filter .form-type-checkboxes > label{
-    font-size: 1em;
-    cursor: pointer;
-    background: #878787;
-    color: white;
-    font-weight: bold; 
-    padding: 0.5em;
-    width: 15em;
-    margin-bottom: 1em;
-    position: relative;
+.tasks-info .info__count{
+    font-family: 'Open sans';
+    font-size: 18px;
 }
 
-.task__filter .form-type-checkboxes > label:after{
+//Filter 
+.task__filter .form-type-checkboxes > label, .form-item-sort-tasks.form-type-radios > label{
+    font-size: 0.875em;
+    cursor: pointer;
+    font-weight: bold; 
+    padding: 0.5em;
+    //width: 17em;
+    margin-bottom: 1em;
+    position: relative;
+    background: white;
+    -webkit-transition: background .15s linear;
+    -moz-transition: background .15s linear;
+    -o-transition: background .15s linear;
+    -ms-transition: background .15s linear;
+    transition: background .15s linear; 
+}
+
+//Filter 
+.task__filter.expand .form-type-checkboxes > label, .task__filter.expand .form-item-sort-tasks.form-type-radios > label{
+    background: #878787;
+    color: white;
+    -webkit-transition: background .15s linear;
+    -moz-transition: background .15s linear;
+    -o-transition: background .15s linear;
+    -ms-transition: background .15s linear;
+    transition: background .15s linear; 
+}
+
+.task__filter .form-type-checkboxes > label:after, .form-item-sort-tasks.form-type-radios > label:after{
     display: block;
     content: "";
     height: 30px;
@@ -863,13 +892,13 @@ display : none; }
     right: 6px;
     background-image: url(../img/skin/icons/weddify-icons-sprite.png);
     background-position: -7px -972px;
-    top: 8px;
+    top: 6px;
 }
 
 .js .task__filter{
-    max-height: 2.625em;
+    max-height: 37px;
     overflow: hidden;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
     -webkit-transition: max-height .15s linear;
     -moz-transition: max-height .15s linear;
     -o-transition: max-height .15s linear;
@@ -886,93 +915,18 @@ display : none; }
 }
 
 .task__filter{
-    width: 15em;
-    border: 1px solid #878787;
-}
-
-.task__filter .form-checkboxes{
-    margin-left: 0.5em;
-}
-
-//Sort
-
-.form-item-sort-tasks{
-    margin-bottom: 2em;
-}
-
-.form-item-sort-tasks.form-type-radios > label{
-    font-size: 1em;
-    border-width: 0 0 1px 0;
-    border-style: solid;
-    border-color: #10a2bd;
-    padding-bottom: 0.5em;
-    margin-bottom: 1em;
-    width: 10em;
-    
-}
-
-
-
-.form-item-sort-tasks .form-type-radio input{
-    display: none;
-}
-
-.form-item-sort-tasks .form-type-radio label{
-    background: white;
+    width: 13em;
     border: 1px solid #10a2bd;
-    padding: 1em;
-    display: block;
-    font-size: 0.875em;
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: bold;
-    -webkit-transition: opacity .15s linear;
-    -moz-transition: opacity .15s linear;
-    -o-transition: opacity .15s linear;
-    -ms-transition: opacity .15s linear;
-    transition: opacity .15s linear; 
-} 
-
-.form-item-sort-tasks .form-type-radio input:checked + label{
-    background: #10a2bd;
-    color: white;
 }
 
-.form-item-sort-tasks .form-type-radio input:focus + label{
-    opacity: 0.8;
-    background: #10a2bd;
-    color: white;
-}
-
-.form-item-sort-tasks .form-type-radio input:active + label{
-    opacity: 0.8;
-    color: white;
-    background: #10a2bd;
-}
-
-.form-item-sort-tasks .form-type-radio input:hover + label{
-    opacity: 0.9;
-    color: white;
-    background: #10a2bd;
-}
-
-.form-item-sort-tasks .form-radios{
-    display: block;
-    width: 15em;
-}
-
-.form-item-sort-tasks .form-radios:after{
-    clear:both;
-    display: block;
-    content: "";
-}
-
-.form-item-sort-tasks .form-type-radio{
-    width: 100%;
+.task__filter .form-checkboxes, .task__filter .form-radios{
+    margin-left: 0.5em;
 }
 
 //Task expand
 
 .form-item-task-expand{
-    
+   padding: .5em .5em .1em .5em;
+    border: 1px solid #878787;
+    width: 13em;
 }
