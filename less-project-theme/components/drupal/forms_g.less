@@ -746,9 +746,11 @@ display : none; }
 
 .task__saved{
     display: none;
-    float: right;
     margin: 0.5em;
     font-size: 0.875em;
+    bottom: 0em;
+    left: 0.25em;
+    position: absolute;    
 }
 
 .task .task__save-task input{
@@ -790,6 +792,7 @@ display : none; }
     height: 30px;
     background-size: cover;
     background-image: url(../img/skin/icons/circleMinus.png);
+    cursor: pointer;
 }
 
 .task.task--collapse .task__expand-button{
