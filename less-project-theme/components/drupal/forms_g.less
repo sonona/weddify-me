@@ -11,7 +11,7 @@
 */
 
 form {
-    margin: 0 auto;
+    margin: 1em 0 auto;
     .themeasureform();
     text-align: left;
 }
@@ -517,6 +517,7 @@ display : none; }
 
 .task__task-info{
     padding: 1em 1em 0 1em;
+    position: relative;
 }
 
 .task__task-info--full{
@@ -526,6 +527,7 @@ display : none; }
 .task-info--additional{
     font-size: 13px;
     margin-top: 0;
+    word-break: break-word;
 }
 
 
@@ -539,6 +541,7 @@ display : none; }
 
 .task__notes .task__save-task{
     float: right;
+    position: relative;
 }
 
 .js .task__notes .task__notes-area{
@@ -657,7 +660,7 @@ display : none; }
 }
 
 .task__footer{
-    width: 80%;
+    width: 95%;
     margin: 0.5em auto 0 auto;
     position: relative;
     border-top: 1px solid #e8e8e8;
@@ -674,6 +677,8 @@ display : none; }
     font-family: 'Cookie',sans-serif;
     font-size: 1.5em;
     color: #10a2bd;
+    line-height: 1;
+    margin-bottom: 0.25em;
 }
 
 .task--closed .task__group{
@@ -748,8 +753,8 @@ display : none; }
     display: none;
     margin: 0.5em;
     font-size: 0.875em;
-    bottom: 0em;
-    left: 0.25em;
+    left: -4.25em;
+    top: 0.5em;
     position: absolute;    
 }
 
@@ -932,4 +937,88 @@ display : none; }
    padding: .5em .5em .1em .5em;
     border: 1px solid #878787;
     width: 13em;
+}
+
+//Go to top
+.scroll__top{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background: #f2f2f2;
+    padding: 0.75em 1em;
+}
+
+//Google recaptcha 
+#google_recaptcha_user_register_form{
+    transform: scale(0.9);
+    -webkit-transform: scale(0.9);
+    transform-origin:0 0;
+    -webkit-transform-origin: 0 0;
+    margin-bottom: 1em;
+}
+
+//Password strength
+.password-strength{
+    font-size: 0.75em;
+    color: #10a2bd;
+}
+
+.password-strength .password-strength-text{
+    position: absolute;
+    left: 11em;
+}
+
+form .form-type-password .password-confirm{
+    color: inherit;
+    font-size: 0.75em;
+    color: #10a2bd;
+}
+
+form .form-type-password .password-confirm{
+    .error, .ok{
+        background-color: transparent;
+        color: #10a2bd;
+    }
+}
+
+form .form-item .description{
+    color: #10a2bd;
+}
+
+form .form-item label{
+    font-weight: bold;
+    font-size: 0.875em;
+}
+
+.tabs.tabs--account{
+    margin: 0;
+    padding: 0;
+}
+
+//Set up form
+
+.form--setup .form-item-step2-wedding-date-hour, .form--setup .form-item-step2-wedding-date-minute{
+    display: none;
+}
+
+.form-item.form-type-date-select .form-type-select{
+    margin-top: 0;
+}
+
+.submit--previous{
+    background-color: transparent;
+    color: #878787;
+    padding: 1em 0;
+    border: 0;
+    box-shadow: none;
+}
+
+.submit--previous:hover{
+    background: none;
+    color: #878787;
+    opacity: 0.7;
+    -webkit-transition: opacity ease-in-out .25s;
+    -moz-transition: opacity ease-in-out .25s;
+    -o-transition: opacity ease-in-out .25s;
+    transition: opacity ease-in-out .25s; 
 }
