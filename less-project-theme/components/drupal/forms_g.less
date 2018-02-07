@@ -880,6 +880,11 @@ display : none; }
     transition: background .15s linear; 
 }
 
+.task__filter .form-type-checkbox label, .form-item-sort-tasks .form-type-checkbox label{
+    font-size: 0.75em;
+    font-weight: normal;
+}
+
 //Filter 
 .task__filter.expand .form-type-checkboxes > label, .task__filter.expand .form-item-sort-tasks.form-type-radios > label{
     background: #878787;
@@ -923,7 +928,7 @@ display : none; }
 }
 
 .task__filter{
-    width: 13em;
+    width: 15em;
     border: 1px solid #10a2bd;
 }
 
@@ -946,7 +951,19 @@ display : none; }
     right: 0;
     background: #f2f2f2;
     padding: 0.75em 1em;
+    visibility: hidden;
+    opacity: 0;
 }
+
+.scroll__top.is-visible{
+    visibility: visible;
+    -webkit-transition: visibility 0s, opacity 0.25s linear;
+    -moz-transition: visibility 0s, opacity 0.25s linear;
+    -o-transition: visibility 0s, opacity 0.25s linear;
+    transition: visibility 0s, opacity 0.25s linear;
+    opacity: 1;
+}
+
 
 //Google recaptcha 
 #google_recaptcha_user_register_form{
@@ -1032,3 +1049,21 @@ form .form-item label{
 .d-section--sign-up-form > h2, .d-section--log-in-form > h2{
         display: none;
     }
+
+
+.task__complete-tick{
+    position: absolute;
+    background: white;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    top: 0;
+    display: none;
+}
+
+.task__complete-tick .complete-tick__text{
+    position: relative;
+    top: 42%;
+    font-size: 2em;
+    font-weight: bold;
+}
