@@ -961,6 +961,7 @@ display : none; }
 .password-strength{
     font-size: 0.75em;
     color: #10a2bd;
+    position: relative;
 }
 
 .password-strength .password-strength-text{
@@ -1022,3 +1023,12 @@ form .form-item label{
     -o-transition: opacity ease-in-out .25s;
     transition: opacity ease-in-out .25s; 
 }
+
+#user-register-form, #user-login-form{
+    max-width: 22em;
+    margin: 3em auto 1em;
+}
+
+.d-section--sign-up-form > h2, .d-section--log-in-form > h2{
+        display: none;
+    }
